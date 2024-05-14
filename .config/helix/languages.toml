@@ -1,0 +1,39 @@
+[[language]]
+name = "rust"
+auto-format = false
+indent = { tab-width = 4, unit = "    " }
+
+[[language]]
+name = "hyprlang"
+auto-format = false
+indent = { tab-width = 4, unit = "    " }
+
+[[language]]
+name = "python"
+language-servers = ["pylsp"]
+
+[[language]]
+name = "sql"
+language-servers = [ "sql-language-server" ]
+
+[language-server.rust-analyzer]
+command = "rust-analyzer"
+
+[language-server.rust-analyzer.config]
+inlayHints.bindingModeHints.enable = false
+inlayHints.closingBraceHints.minLines = 10
+inlayHints.closureReturnTypeHints.enable = "with_block"
+inlayHints.discriminantHints.enable = "fieldless"
+inlayHints.lifetimeElisionHints.enable = "skip_trivial"
+inlayHints.typeHints.hideClosureInitialization = false
+
+[language-server.pylsp.config.pylsp]
+plugins.pyls_mypy.enabled = true
+plugins.pyls_mypy.live_mode = true
+
+[language-server.sql-language-server]
+command = "sql-language-server"
+args = ["up", "--method", "stdio"]
+
+[language-server.docker-compose-langserver]
+command = "docker-compose-langserver"

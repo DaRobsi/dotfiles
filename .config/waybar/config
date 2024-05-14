@@ -1,0 +1,89 @@
+{
+    "layer": "top",     // Waybar at top layer
+    "position": "top",  // Waybar at the bottom of your screen
+    "height": 24,       // Waybar height
+
+    //---MODULE POSITIONING---//
+    "modules-left": [
+        "hyprland/workspaces", 
+        "hyprland/window", 
+        "custom/spotify"
+    ],
+    "modules-center": [
+        "clock"
+    ],
+    "modules-right": [
+        "pulseaudio", 
+        "network", 
+        "cpu", 
+        "memory", 
+        "tray"
+    ],
+
+    //---MODULE CONFIG---//
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": false,
+        "format": "{icon}",
+        "format-icons": {
+            "1": "1",
+            "2": "2",
+            "3": "3",
+            "4": "4",
+            "5": "5"
+        }
+    },
+
+    "hyprland/window": {
+        "max-length": 200,
+        "seperate-outputs": true
+    },
+
+    "tray": {
+        // "icon-size": 21,
+        "spacing": 10
+    },
+
+    "clock": {
+        "format": "{:%d.%m.%Y - %H:%M}"
+    },
+
+    "cpu": {
+        "format": "{usage}% "
+    },
+
+    "memory": {
+        "format": "{}% "
+    },
+    
+    "network": {
+        "format-wifi": "{essid} ({signalStrength}%) ",
+        "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
+        "format-disconnected": "Disconnected ⚠"
+    },
+
+    "pulseaudio": {
+        //"scroll-step": 1,
+        "format": "{volume}% {icon}",
+        "format-bluetooth": "{volume}% {icon}",
+        "format-muted": "",
+        "format-icons": {
+            "headphones": "",
+            "handsfree": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+
+    "custom/spotify": {
+        "format": " {}",
+        "max-length": 40,
+        "interval": 30, // Remove this if your script is endless and write in loop
+        "exec": "$HOME/.config/waybar/mediaplayer.sh 2> /dev/null", // Script in resources folder
+        "exec-if": "pgrep spotify"
+    }
+}
