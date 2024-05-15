@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# THIS IS 1:1 ADAPTED FROM 0xk1f0
+
 # "bash strict mode"
 set -uo pipefail
 
