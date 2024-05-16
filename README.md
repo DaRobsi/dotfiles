@@ -3,11 +3,14 @@ This is a collection of my dotfiles, scripts and all other stuff that I might de
 
 ## Packages
 Official:
-`helix mpv ristretto rofi nwg-look vlc easyeffects waybar kitty thunar dunst zoxide fzf exa`
+`helix mpv ristretto rofi nwg-look vlc easyeffects waybar kitty thunar dunst zoxide fzf exa hyprpaper rustup`
 
 AUR:
 `rwpspread`
 
+THEME:
+`nordic-theme`
+
 ## TODO
-- [] find way to properly separate Laptop-only config
-- [] add battery for laptop config
+- [ ] find way to properly separate Laptop-only config
+- [ ] add battery for laptop config
