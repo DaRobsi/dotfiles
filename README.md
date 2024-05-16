@@ -9,5 +9,5 @@ AUR:
 `rwpspread`
 
 ## TODO
-[] find way to properly separate Laptop-only config
-[] add battery for laptop config
+- [] find way to properly separate Laptop-only config
+- [] add battery for laptop config
