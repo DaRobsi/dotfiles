@@ -29,6 +29,7 @@ alias clnJnk='/home/$USER/.config/scripts/clnJnk'
 ## ADDITIONAL FUNCTIONS ##
 mkcd () { mkdir -p $1; cd $1; }
 
+setkbl () { hyprctl keyword input:kb_layout $1; }
 
 ## COMMAND PROMPT ##
 eval "$(starship init bash)"
