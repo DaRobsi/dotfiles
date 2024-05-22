@@ -10,7 +10,8 @@ indent = { tab-width = 4, unit = "    " }
 
 [[language]]
 name = "python"
-language-servers = ["pylsp"]
+roots = ["pyproject.toml", "Poetry.lock", "."]
+language-servers = ["pyright"]
 
 [[language]]
 name = "sql"
@@ -27,9 +28,16 @@ inlayHints.discriminantHints.enable = "fieldless"
 inlayHints.lifetimeElisionHints.enable = "skip_trivial"
 inlayHints.typeHints.hideClosureInitialization = false
 
-[language-server.pylsp.config.pylsp]
-plugins.pyls_mypy.enabled = true
-plugins.pyls_mypy.live_mode = true
+[language-server.pyright]
+command = "pyright-langserver"
+args = ["--stdio"]
+
+[language-server.pyright.config]
+reportMissingTypeStubs = false
+
+[language-server.pyright.config.python.analysis]
+typeCheckingMode = "basic"
+autoImportCompletions = true
 
 [language-server.sql-language-server]
 command = "sql-language-server"
