@@ -2,13 +2,13 @@
 
 set -uo pipefail
 
-SPLIT_RATIO=$(hyprctl getoption dwindle:split_width_multiplier | grep 1)
+SPLIT_RATIO=$(hyprctl getoption dwindle:split_width_multiplier | grep float | awk '{print $2}' | awk '{printf "%.1f\n", $1}')
 
-if [[ $SPLIT_RATIO -eq 1.0 && $LAYOUT = "dwindle" ]]; then
+if [[ $(echo "$SPLIT_RATIO==1.0" | bc -l) && "$LAYOUT" = "dwindle" ]]; then
     hyprctl keyword dwindle:split_width_multiplier 1.8
     SPLIT_RATIO=1.8
     MSG="Set split ratio to 1.8"
-elif [[ $SPLIT_RATIO -eq 1.8 && $LAYOUT = "dwindle" ]]; then
+elif [[ $(echo "$SPLIT_RATIO==1.8" | bc -l) && "$LAYOUT" = "dwindle" ]]; then
     hyprctl keyword dwindle:split_width_multiplier 1.0
     SPLIT_RATIO=1.0
     MSG="Set split ratio to 1.0"
