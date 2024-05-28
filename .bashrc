@@ -10,6 +10,10 @@
 fastfetch
 
 
+## ENVVARS ##
+EDITOR="helix"
+
+
 ## ALIASES ##
 alias ls='exa'
 alias ll='exa -lg --total-size'
