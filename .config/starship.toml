@@ -1,0 +1,30 @@
+add_newline = true
+
+format = """$cmd_duration\
+$python\
+$directory\
+$git_branch\
+$character"""
+
+[character]
+format = "$symbol "
+success_symbol = "[>](bold #ffffff)"
+error_symbol = "[>](bold #ffffff)"
+
+[directory]
+style = "italic bold"
+home_symbol = "~"
+read_only = ""
+truncation_length = 2
+truncation_symbol = '../'
+
+[cmd_duration]
+format = "\n[$duration]($style)\n"
+style = "italic bold"
+show_milliseconds = false
+
+[git_branch]
+style = "italic bold"
+
+[python]
+format = '(\($virtualenv\) )'
