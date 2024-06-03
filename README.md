@@ -6,7 +6,7 @@ Official:
 `helix mpv ristretto rofi nwg-look vlc easyeffects waybar kitty thunar dunst zoxide fzf exa hyprpaper rustup`
 
 AUR:
-`rwpspread`
+`rwpspread ani-cli`
 
 THEME:
 `nordic-theme`
