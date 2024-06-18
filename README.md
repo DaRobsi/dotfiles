@@ -3,7 +3,7 @@ This is a collection of my dotfiles, scripts and all other stuff that I might de
 
 ## Packages
 Official:
-`helix mpv ristretto rofi nwg-look vlc easyeffects waybar kitty thunar dunst zoxide fzf exa hyprpaper rustup`
+`helix mpv ristretto rofi nwg-look vlc easyeffects waybar kitty thunar dunst zoxide fzf exa hyprpaper rustup wl-clipboard grim`
 
 AUR:
 `rwpspread ani-cli`
