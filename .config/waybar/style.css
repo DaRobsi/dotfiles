@@ -50,16 +50,17 @@ window#waybar {
 #battery {
 }
 
-#battery icon {
+#battery:not(.charging) icon {
     color: red;
+}
+
+#battery.warning:not(.charging) {
+    color: yellow;
 }
 
 #battery.charging {
     color: blue;
-}
-
-#battery.warning {
-    color: yellow;
+    background-color: transparent;
 }
 
 @keyframes blink {
