@@ -13,6 +13,7 @@
         "clock"
     ],
     "modules-right": [
+        "battery",
         "pulseaudio", 
         "network", 
         "cpu", 
@@ -77,6 +78,17 @@
             "default": ["", ""]
         },
         "on-click": "pavucontrol"
+    },
+
+    "battery": {
+	    "interval": 60,
+	    "states": {
+		    "warning": 20,
+		    "critical": 10
+	    },
+	    "format": "{capacity}% {icon}",
+	    "format-icons": ["", "", "", "", ""],
+	    "max-length": 25
     },
 
     "custom/spotify": {
