@@ -35,6 +35,8 @@ mkcd () { mkdir -p $1; cd $1; }
 
 setkbl () { hyprctl keyword input:kb_layout $1; }
 
+countlines () { find $1 -name $2 -exec wc -l {} +; }
+
 ## COMMAND PROMPT ##
 eval "$(starship init bash)"
 
