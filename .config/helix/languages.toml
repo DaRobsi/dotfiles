@@ -11,7 +11,7 @@ indent = { tab-width = 4, unit = "    " }
 [[language]]
 name = "python"
 roots = ["pyproject.toml", "Poetry.lock", "."]
-language-servers = ["pyright"]
+language-servers = ["ruff"]
 
 [[language]]
 name = "sql"
@@ -27,6 +27,12 @@ inlayHints.closureReturnTypeHints.enable = "with_block"
 inlayHints.discriminantHints.enable = "fieldless"
 inlayHints.lifetimeElisionHints.enable = "skip_trivial"
 inlayHints.typeHints.hideClosureInitialization = false
+
+[language-server.ruff]
+command = "ruff-lsp"
+
+[language-server.ruff.config.settings]
+args = ["--ignore", "E501"]
 
 [language-server.pyright]
 command = "pyright-langserver"
