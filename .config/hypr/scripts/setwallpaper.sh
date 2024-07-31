@@ -7,7 +7,7 @@ killall -9 -q rwpspread
 
 hour=$(date +"%H")
 
-if [[ $hour -le 6 || $hour -ge 20 ]]; then
+if [[ $hour -le 6 || $hour -ge 17 ]]; then
 	rwpspread -dp --backend hyprpaper --locker swaylock --image /home/$USER/Wallpapers/night
 else
 rwpspread -dp --backend hyprpaper --locker swaylock --image /home/$USER/Wallpapers/day
