@@ -13,14 +13,14 @@ background-color: rgba(59,66,82,0.4);
 }
 
 #inner-box {
-margin: 10px;
+margin: auto;
 border: none;
 border-radius: 8px;
 background-color: rgba(46,52,64,0.4);
 }
 
 #outer-box {
-margin: 10px;
+margin: auto;
 border: none;
 border-radius: 8px;
 background-color: rgba(46,52,64,0.4);
