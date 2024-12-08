@@ -1,0 +1,39 @@
+window {
+margin: 0px;
+border: 1px solid #88c0d0;
+border-radius: 10px;
+background-color: rgba(46,52,64,0.4);
+}
+
+#input {
+margin: 25px;
+border: none;
+color: #d8dee9;
+background-color: rgba(59,66,82,0.4);
+}
+
+#inner-box {
+margin: 10px;
+border: none;
+border-radius: 8px;
+background-color: rgba(46,52,64,0.4);
+}
+
+#outer-box {
+margin: 10px;
+border: none;
+border-radius: 8px;
+background-color: rgba(46,52,64,0.4);
+}
+
+#scroll {
+margin: 0px;
+border: none;
+}
+
+#text {
+margin: 10px;
+border: none;
+}
+
+
