@@ -1,7 +1,7 @@
 stylesheet=style.css
 location=center
 show=drun
-width=1500
+width=1200
 height=600
 always_parse_args=true
 show_all=true
