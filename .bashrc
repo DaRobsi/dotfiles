@@ -28,7 +28,7 @@ alias setwp='/home/$USER/.config/hypr/scripts/setwallpaper.sh & disown'
 alias dcp='docker-compose'
 alias hx='helix'
 alias clnJnk='/home/$USER/.config/scripts/clnJnk'
-
+alias yazelix='nu -c "zellij --config-dir ~/.config/yazelix/zellij attach --create yazelix_ghostty options --default-layout yazelix"'
 
 ## ADDITIONAL FUNCTIONS ##
 mkcd () { mkdir -p $1; cd $1; }
