@@ -5,12 +5,46 @@ set -uo pipefail
 
 killall -9 -q rwpspread
 
-hour=$(date +"%H")
+HOUR=$(date +"%H")
+wpdir="undefined"
 
-if [[ $hour -le 6 || $hour -ge 17 ]]; then
+setday () {
+	rwpspread -dp --backend swaybg --locker swaylock --image /home/$USER/Wallpapers/day
+}
+
+setnight () {
 	rwpspread -dp --backend swaybg --locker swaylock --image /home/$USER/Wallpapers/night
-else
-rwpspread -dp --backend swaybg --locker swaylock --image /home/$USER/Wallpapers/day
-fi
+}
 
-dunstify "setwallpaper.sh" "Wallpaper set!"
+settime() {
+	if [[ $HOUR -le 6 || $HOUR -ge 17 ]]; then
+		setnight
+		wpdir=$"night"
+	else
+		setday
+		wpdir=$"day"
+	fi
+}
+
+while getopts 'dnt' OPTION; do
+	case "$OPTION" in
+		d)
+			setday
+			wpdir=$"day"
+			;;
+		n)
+			setnight
+			wpdir=$"night"
+			;;
+		t)
+			settime
+			;;
+		?)
+			echo "script usage: setwallpaper.sh [-d] [-n] [-t]" >&2
+			exit 1
+			;;
+	esac
+done
+shift "$(($OPTIND -1))"
+
+dunstify "setwallpaper.sh" "Wallpaper set from $wpdir dir!"
