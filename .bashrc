@@ -24,7 +24,7 @@ alias grep='grep --color=auto'
 alias cat='bat --style header --style snip --style changes'
 alias hyperbeam='hyperbeam --disable-gpu-sandbox & disown'
 alias wev='wev -F wl_pointer'
-alias setwp='/home/$USER/.config/hypr/scripts/setwallpaper.sh -t & disown'
+alias setwp_script='/home/$USER/.config/hypr/scripts/setwallpaper.sh'
 alias dcp='docker-compose'
 alias hx='helix'
 alias clnJnk='/home/$USER/.config/scripts/clnJnk'
@@ -36,6 +36,14 @@ mkcd () { mkdir -p $1; cd $1; }
 setkbl () { hyprctl keyword input:kb_layout $1; }
 
 countlines () { find $1 -name $2 -exec wc -l {} +; }
+
+setwp () {
+  if [[ -z "$1" ]]; then
+    setwp_script -t & disown
+  else
+    setwp_script "$@" & disown
+  fi
+}
 
 ## COMMAND PROMPT ##
 eval "$(starship init bash)"
