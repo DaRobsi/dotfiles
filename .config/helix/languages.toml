@@ -17,6 +17,11 @@ language-servers = ["pyright"]
 name = "sql"
 language-servers = [ "sql-language-server" ]
 
+[[language]]
+name = "yaml"
+file-types = ["yaml", "yml"]
+language-servers = [ "yaml-language-server" ]
+
 [language-server.rust-analyzer]
 command = "rust-analyzer"
 
@@ -51,3 +56,7 @@ args = ["up", "--method", "stdio"]
 
 [language-server.docker-compose-langserver]
 command = "docker-compose-langserver"
+
+[language-server.yaml-language-server]
+command = "yaml-language-server"
+args = ["--stdio"]
