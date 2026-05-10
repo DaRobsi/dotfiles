@@ -29,11 +29,10 @@ alias dcp='docker-compose'
 alias hx='helix'
 alias clnJnk='/home/$USER/.config/scripts/clnJnk'
 alias yazelix='nu -c "zellij --config-dir ~/.config/yazelix/zellij attach --create yazelix_ghostty options --default-layout yazelix"'
+alias setkbl='hyprctl switchxkblayout usb-hid-gmmk-2-full-size-96% next'
 
 ## ADDITIONAL FUNCTIONS ##
 mkcd () { mkdir -p $1; cd $1; }
-
-setkbl () { hyprctl keyword input:kb_layout $1; }
 
 countlines () { find $1 -name $2 -exec wc -l {} +; }
 
