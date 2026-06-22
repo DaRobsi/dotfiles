@@ -22,6 +22,10 @@ name = "yaml"
 file-types = ["yaml", "yml"]
 language-servers = [ "yaml-language-server" ]
 
+[[language]]
+name = "lua"
+language-servers = ["lua-language-server"]
+
 [language-server.rust-analyzer]
 command = "rust-analyzer"
 
@@ -60,3 +64,14 @@ command = "docker-compose-langserver"
 [language-server.yaml-language-server]
 command = "yaml-language-server"
 args = ["--stdio"]
+
+[language-server.lua-language-server]
+command = "lua-language-server"
+
+[language-server.lua-language-server.config.Lua.hint]
+enable = true
+arrayIndex = "Enable"
+setType = true
+paramName = "All"
+paramType = true
+await = true
