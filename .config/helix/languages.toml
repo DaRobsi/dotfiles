@@ -75,3 +75,9 @@ setType = true
 paramName = "All"
 paramType = true
 await = true
+
+[language-server.lua-language-server.config.Lua.workspace]
+library = ["/usr/share/hypr/stubs"]
+ignore = [""]
+maxPreload = 10000
+preloadFileSize = 1000
