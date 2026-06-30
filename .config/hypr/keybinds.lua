@@ -21,8 +21,18 @@ for i = 1, 10 do
   local key = i % 10
   hl.bind(mainMod .. " + " .. key, hl.dsp.focus({ workspace = i})) -- switch to workspace
   hl.bind(mainMod .. " + SHIFT +" .. key, hl.dsp.window.move({ workspace = i})) -- move window to workspace
-  hl.bind(mainMod .. " + KP_" .. key, hl.dsp.focus({ workspace = i})) -- switch to workspace with numpad
 end
+
+-- switch to workspace keypad
+hl.bind(mainMod .. " + code:87", hl.dsp.focus({ workspace = 1}))
+hl.bind(mainMod .. " + code:88", hl.dsp.focus({ workspace = 2}))
+hl.bind(mainMod .. " + code:89", hl.dsp.focus({ workspace = 3}))
+hl.bind(mainMod .. " + code:83", hl.dsp.focus({ workspace = 4}))
+hl.bind(mainMod .. " + code:84", hl.dsp.focus({ workspace = 5}))
+hl.bind(mainMod .. " + code:85", hl.dsp.focus({ workspace = 6}))
+hl.bind(mainMod .. " + code:79", hl.dsp.focus({ workspace = 7}))
+hl.bind(mainMod .. " + code:80", hl.dsp.focus({ workspace = 8}))
+hl.bind(mainMod .. " + code:81", hl.dsp.focus({ workspace = 9}))
 
 --Move/resize window
 hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(), { mouse = true})
