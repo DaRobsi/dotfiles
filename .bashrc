@@ -50,4 +50,7 @@ eval "$(starship init bash)"
 ## ZOXIDE ##
 eval "$(zoxide init --cmd cd bash)"
 
+## PYENV ##
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init --path)"
 

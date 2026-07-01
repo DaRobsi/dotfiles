@@ -76,6 +76,9 @@ hl.env("XCURSOR_SIZE", 24)
 hl.env("LAYOUT", "dwindle")
 --change to qt6ct if you have that
 hl.env("QT_QPA_PLATFORMTHEME", "qt5ct")
+-- ROCm
+hl.env("ROCM_PATH", "/opt/rocm")
+hl.env("HSA_OVERRIDE_GFX_VERSION", "11.0.0")
 
 --gestures--
 hl.gesture({
